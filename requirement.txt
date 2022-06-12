@@ -1,0 +1,46 @@
+
+
+Step 1
+Register --> 
+/create-profile --> If email & Phone matched update same profile else create-new
+PersonDetails : {
+    Sting userId
+    Sting firstName;
+    String lastName;
+    String phoneNumber;
+    String email;
+    String password
+    String address;
+}
+
+Step 2
+User Login --> Hello User // Hello admin
+
+Step 3 --> 
+/generate-receipt  + (If user is hitting ?) -- profile will already logged In
+
+{
+    UPI ID -- 1st pref / 2nd pref - UPI mobile no. // Source of payment mode
+    String userId, // can be automatically collected cause user is loggedIn
+    Amount -- ?
+    dateTime?
+}
+    
+    generate receipt PDF
+
+    Open in new tab --> print and give to User
+
+
+    Admin Panel
+
+    select * from person_details p INNER JOIN receipt r on p.userId = r.userId;
+
+ DBA --> pass change for admin
+    1) login system -- (Signup/Register + Login?)
+    2) admin login with different path --> /admin --> transaction records
+      i) Transaction History (display by order by transaction dateTime) --> 1 row displaying -> 1 column which allows to create and print receipt
+      ii) Receipt request --> approved by guruji --> After approval --> email that receipt or pdf open
+    3) create receipt landing page ---
+       i) -> get request from user for receipt (can view the request)
+
+how to create login system through php?
